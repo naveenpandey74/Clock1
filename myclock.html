@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+        function clock(){
+            var now = new Date();
+            document.querySelector("p").innerHTML= now.toLocaleTimeString();
+        }
+        function bodyload(){
+            setInterval(clock,1000);
+        }
+    </script>
+</head>
+<body class="container-fluid d-flex justify-content-center align-items-center" onload="bodyload()" style="height: 100vh;">
+    <div class="card p-2 m-2">
+        <div class="card-header fw-bold bg-info text-white text-center">Clock</div>
+        <div class="card-body bg-warning text-white fw-bold">
+            <p align="center"></p>
+        </div>
+    </div>
+   
+</body>
+</html>
